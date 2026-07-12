@@ -10,3 +10,5 @@ jobs:
       - uses: anishathalye/proof-html@v2
         with:
           directory: ./
+          # TODO: remove once kai-course-notes.kaichen.dev is live on Vercel
+          url_ignore_re: ^https://kai-course-notes\.kaichen\.dev

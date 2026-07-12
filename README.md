@@ -1,9 +1,25 @@
 # kai-course-notes.kaichen.dev
 
-The showcase site for [Kai Course Notes](https://github.com/kaiiiichen/Kai-Course-Notes) — plain HTML + CSS, no build step, deployed on Vercel.
+Showcase site for **Kai Course Notes** — courses I took at SUSTech, UC Berkeley, Oxford, and beyond, with notes, homework, and projects. Lives at [kai-course-notes.kaichen.dev](https://kai-course-notes.kaichen.dev).
 
-- **Files** live in the [Kai-Course-Notes](https://github.com/kaiiiichen/Kai-Course-Notes) repository
-- **Web notes** live on the [Notion branch](https://kai-course-notes.notion.site/main)
-- Main personal website: [kaichen.dev](https://kaichen.dev)
+Plain static HTML and CSS. No build step, no dependencies.
 
-To add or update a course card, edit `index.html` directly.
+## Develop
+
+Open `index.html` in a browser, or serve the directory:
+
+```bash
+python3 -m http.server
+```
+
+## Structure
+
+- `index.html` — the course catalog (all cards, grouped by school)
+- `conduct.html` — code of conduct & per-institution content policy
+- `css/main.css` — the whole stylesheet
+
+## Related
+
+- [Kai-Course-Notes](https://github.com/kaiiiichen/Kai-Course-Notes) — the course files themselves
+- [Notion branch](https://kai-course-notes.notion.site/main) — web-native study notes
+- [kaichen.dev](https://kaichen.dev) — main personal website
