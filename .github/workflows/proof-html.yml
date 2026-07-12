@@ -1,0 +1,12 @@
+name: Proof HTML
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: anishathalye/proof-html@v2
+        with:
+          directory: ./
