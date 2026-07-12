@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Kai Course Notes (the materials)
+    url: https://github.com/kaiiiichen/Kai-Course-Notes/issues
+    about: Course files, content policy, and takedown requests — not the website
+  - name: 📝 Notion notes branch
+    url: https://kai-course-notes.notion.site/main
+    about: Web-native study notes
