@@ -285,3 +285,64 @@ footer .copyright {
 	font-size: 0.85rem;
 	color: var(--tertiary-text);
 }
+
+
+/* == prose (conduct page) ============================================== */
+
+.prose {
+	max-width: 40rem;
+	margin-inline: auto;
+	padding: 0 1.25rem 3rem;
+}
+
+.prose section + section {
+	margin-block-start: 2.75rem;
+}
+
+.prose h2 {
+	font-family: var(--mono);
+	font-size: 1.15rem;
+	font-weight: 500;
+	text-align: start;
+	color: var(--tertiary-text);
+	margin-block-end: 0.9rem;
+}
+.prose h2::before { content: '# '; }
+
+.prose h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin-block: 1.5rem 0.4rem;
+}
+
+.prose p {
+	color: var(--secondary-text);
+	margin-block-start: 0.6rem;
+}
+
+.prose strong, .prose em {
+	color: var(--text);
+}
+
+.prose ul {
+	list-style: none;
+	margin-block-start: 0.6rem;
+}
+
+.prose li {
+	color: var(--secondary-text);
+	padding-inline-start: 1.1rem;
+	position: relative;
+}
+
+.prose li + li {
+	margin-block-start: 0.5rem;
+}
+
+.prose li::before {
+	content: '·';
+	position: absolute;
+	inset-inline-start: 0.2rem;
+	color: var(--accent);
+	font-weight: 700;
+}
