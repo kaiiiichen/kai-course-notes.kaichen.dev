@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/* == base ============================================================== */
+
+:root {
+	color-scheme: light dark;
+
+	--background: light-dark(white, hsl(220, 18%, 7%));
+	--text: light-dark(hsla(0, 0%, 0%, .85), hsla(0, 0%, 100%, .9));
+	--secondary-text: light-dark(hsla(0, 0%, 0%, .6), hsla(0, 0%, 100%, .62));
+	--tertiary-text: light-dark(hsla(0, 0%, 0%, .45), hsla(0, 0%, 100%, .45));
+	--separator: light-dark(hsla(0, 0%, 0%, .1), hsla(0, 0%, 100%, .12));
+	--card-background: light-dark(hsla(0, 0%, 0%, .03), hsla(0, 0%, 100%, .05));
+
+	/* scholarly ink blue; brightened on dark surfaces for legibility */
+	--ink: hsl(215, 70%, 38%);
+	--accent: light-dark(var(--ink), hsl(215, 85%, 70%));
+
+	--mono: ui-monospace, 'SF Mono', 'Menlo', 'Cascadia Mono', monospace;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* global type scale: all rem-based sizes and widths grow together */
+	font-size: 110%;
+}
+
+body {
+	font: 1rem/1.6 -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', 'Segoe UI', sans-serif;
+	color: var(--text);
+	background: var(--background);
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+	margin-block-end: 2rem;
+}
+
+main > section {
+	padding: 3rem 1.25rem;
+}
+
+
+/* == header ============================================================ */
+
+header nav ul {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1.75rem;
+	list-style: none;
+	padding: 1.1rem 1.25rem;
+}
+
+header nav a {
+	color: var(--secondary-text);
+	font-size: 1rem;
+}
+header nav a:hover {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+
+/* == hero ============================================================== */
+
+#top {
+	text-align: center;
+	padding-block-start: 3rem;
+	padding-block-end: 1rem;
+}
+
+.logo {
+	font-size: 4rem;
+	line-height: 1;
+	margin-block-end: 0.75rem;
+}
+
+#top h1 {
+	font-family: var(--mono);
+	font-size: 2.6rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	margin-block-start: 0.5rem;
+}
+
+.tagline {
+	font-size: 1.15rem;
+	color: var(--secondary-text);
+	margin-block-start: 0.5rem;
+}
+
+#latest {
+	margin-block-start: 2rem;
+}
+
+.badge {
+	display: inline-block;
+	padding: 0.65em 1.5em;
+	border: 1px solid var(--separator);
+	border-radius: 2em;
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--secondary-text);
+	background: var(--card-background);
+	cursor: default;
+}
+
+.phase {
+	font-family: var(--mono);
+	font-size: 0.8rem;
+	color: var(--tertiary-text);
+	margin-block-start: 1rem;
+}
+
+
+/* == how =============================================================== */
+
+#how {
+	max-width: 60rem;
+	margin-inline: auto;
+	padding-block-end: 1rem;
+}
+
+#how > div {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 1.25rem;
+}
+
+#how > div > section {
+	padding: 1.4rem 1.5rem;
+	background: var(--card-background);
+	border-radius: 14px;
+}
+
+#how h3 {
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-block-end: 0.4rem;
+}
+
+#how p {
+	font-size: 0.925rem;
+	color: var(--secondary-text);
+}
+
+
+/* == course sections =================================================== */
+
+#sustech, #berkeley, #oxford, #other {
+	max-width: 60rem;
+	margin-inline: auto;
+}
+
+#sustech h2, #berkeley h2, #oxford h2, #other h2 {
+	font-family: var(--mono);
+	font-weight: 500;
+	color: var(--tertiary-text);
+}
+#sustech h2::before, #berkeley h2::before, #oxford h2::before, #other h2::before {
+	content: '# ';
+}
+
+.group {
+	font-family: var(--mono);
+	font-size: 0.85rem;
+	font-weight: 500;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--tertiary-text);
+	margin-block: 1.75rem 0.9rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+	gap: 1.25rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 1.3rem 1.5rem;
+	background: var(--card-background);
+	border-radius: 14px;
+}
+
+.card .code {
+	font-family: var(--mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.06em;
+	color: var(--tertiary-text);
+}
+
+.card h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.4;
+	margin-block: 0.25rem 0.35rem;
+}
+
+.card h3 a {
+	color: var(--text);
+}
+.card h3 a:hover {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+.card .term {
+	font-size: 0.85rem;
+	color: var(--tertiary-text);
+}
+
+.card .links {
+	margin-block-start: auto;
+	padding-block-start: 0.8rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.card .links a + a {
+	margin-inline-start: 1.1rem;
+}
+
+
+/* == develop =========================================================== */
+
+#develop {
+	text-align: center;
+	padding-block: 4.5rem;
+}
+
+#develop h3 {
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+#develop p {
+	color: var(--secondary-text);
+	max-width: 32rem;
+	margin: 0.5rem auto 0;
+}
+
+#develop .github {
+	display: inline-block;
+	margin-block-start: 1.75rem;
+	padding: 0.65em 1.5em;
+	border: 1px solid var(--accent);
+	border-radius: 2em;
+	font-size: 0.95rem;
+	font-weight: 500;
+}
+#develop .github:hover {
+	background: var(--accent);
+	color: var(--background);
+	text-decoration: none;
+}
+
+
+/* == footer ============================================================ */
+
+footer {
+	border-block-start: 1px solid var(--separator);
+	padding: 2rem 1.5rem;
+	text-align: center;
+}
+
+footer .copyright {
+	font-size: 0.85rem;
+	color: var(--tertiary-text);
+}
